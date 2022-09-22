@@ -13,7 +13,7 @@ func TestTransferTx(t *testing.T) {
 	fromAccount := createRandomAccount(t)
 	toAccount := createRandomAccount(t)
 	fmt.Printf(">> Before fromAccount = %v, toAccount = %v\n", fromAccount.Balance, toAccount.Balance)
-	// run a concurrent goroutine 
+	// run a concurrent goroutine
 	n := 5
 	errChannel := make(chan error)
 	resultChannel := make(chan TransferTxResult)
