@@ -39,3 +39,16 @@ func RandomInt(min, max int64) int64 {
 func RandomMoney() int64 {
 	return RandomInt(100, 10000)
 }
+
+func RandomFullName() string {
+	firstName := []string{"David", "Cyrus", "Vladimir", "Bernie", "Flo", "Daniel", "Lucas", "Helsinki"}
+	middleName := []string{"Naun", "Mountain", "Vir"}
+	lastName := []string{"Falk", "Rob", "Mil", "Wolf", "Hillan"}
+
+	var fullname strings.Builder
+	fullname.WriteString(firstName[rand.Intn(len(firstName))])
+	fullname.WriteString(middleName[rand.Intn(len(middleName))])
+	fullname.WriteString(lastName[rand.Intn(len(lastName))])
+
+	return fullname.String()
+}
